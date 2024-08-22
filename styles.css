@@ -1,0 +1,305 @@
+/* General Styles */
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #f8f8f8;
+    background: linear-gradient(135deg, #f8b6d8, #8c2a5c);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+header {
+    position: relative;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 600;
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+/* Navigation Bar */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f8b6d8;
+}
+
+nav ul li::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #f8b6d8;
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+nav ul li:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Intro Section */
+.intro {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.intro h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.intro p {
+    font-size: 1.5em;
+    line-height: 1.5;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #f8f8f8;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.btn {
+    background: linear-gradient(45deg, #8c2a5c, #f8b6d8);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin-top: 30px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover {
+    background: linear-gradient(45deg, #f8b6d8, #8c2a5c);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Services Section */
+.services {
+    padding: 50px 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 50px 0;
+    border-radius: 20px;
+}
+
+.services h2 {
+    font-size: 2.2em;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+.service {
+    margin: 20px 0;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.service img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.service h3 {
+    font-size: 1.8em;
+    color: #f8b6d8;
+    margin-top: 15px;
+}
+
+/* Gallery Section */
+.gallery {
+    padding: 50px 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    margin: 50px 0;
+}
+
+.gallery h2 {
+    font-size: 2.2em;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 15px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+/* Reviews Section */
+.reviews {
+    padding: 50px 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    margin: 50px 0;
+}
+
+.reviews h2 {
+    font-size: 2.2em;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+.carousel {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-item {
+    display: none;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    border-radius: 15px;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 1;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+#prevBtn {
+    left: 10px;
+}
+
+#nextBtn {
+    right: 10px;
+}
+
+/* Form */
+form {
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+}
+
+textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.1em;
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+}
+
+button {
+    background: linear-gradient(45deg, #8c2a5c, #f8b6d8);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    font-size: 1.2em;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #f8b6d8, #8c2a5c);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 1em;
+    position: relative;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #f8b6d8, 0 0 20px #f8b6d8, 0 0 30px #f8b6d8;
+    }
+    to {
+        text-shadow: 0 0 20px #ff68b8, 0 0 30px #ff68b8, 0 0 40px #ff68b8;
+    }
+}

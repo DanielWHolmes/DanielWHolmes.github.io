@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews - Libby's Lasg Studio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+            </ul>
+        </nav>
+        <h1>Customer Reviews</h1>
+    </header>
+
+    <section class="reviews">
+        <h2>What Our Clients Say</h2>
+        <div class="carousel">
+            <div class="carousel-item active">
+                <p>"Amazing service! My lashes look stunning and lasted so long." - Sarah J.</p>
+            </div>
+            <div class="carousel-item">
+                <p>"I've tried many lash studios, but this one is by far the best!" - Emily K.</p>
+            </div>
+            <div class="carousel-item">
+                <p>"Professional and friendly staff. I always leave happy." - Rachel L.</p>
+            </div>
+        </div>
+        <button id="prevBtn" class="carousel-btn"><i class="fas fa-chevron-left"></i></button>
+        <button id="nextBtn" class="carousel-btn"><i class="fas fa-chevron-right"></i></button>
+
+        <form id="reviewForm">
+            <h3>Leave a Review</h3>
+            <textarea id="reviewText" placeholder="Write your review here..." required></textarea>
+            <button type="submit" class="btn">Submit Review</button>
+        </form>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
